@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bTv-nF-tpa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -8,10 +8,97 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Controls-->
+        <scene sceneID="sVP-Wy-ofn">
+            <objects>
+                <viewController id="eDR-kM-J7f" customClass="ViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7EO-0w-DNf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="i3s-hd-YAY">
+                                <rect key="frame" x="35.5" y="202" width="343" height="492"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAv-j5-yS6">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="146"/>
+                                        <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="146" id="0cT-7j-SYI"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="AMR-S2-TnA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="28"/>
+                                        <state key="normal" title="Press to Download Image">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Bwg-Mc-BXz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRO-Lv-zUk">
+                                        <rect key="frame" x="0.0" y="173" width="343" height="146"/>
+                                        <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="JP9-yi-v6R"/>
+                                            <constraint firstAttribute="height" constant="146" id="zsJ-U5-KZq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="28"/>
+                                        <state key="normal" title="GET">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="getRequest:" destination="eDR-kM-J7f" eventType="touchUpInside" id="2Ji-Ig-ZMu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsE-Dv-eOz">
+                                        <rect key="frame" x="0.0" y="346" width="343" height="146"/>
+                                        <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="EYG-Ky-3Wo"/>
+                                            <constraint firstAttribute="height" constant="146" id="mab-El-lnk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="28"/>
+                                        <state key="normal" title="POST">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="postRequest:" destination="eDR-kM-J7f" eventType="touchUpInside" id="WMF-Sp-rNB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8yD-Wq-a3u"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="i3s-hd-YAY" firstAttribute="centerX" secondItem="7EO-0w-DNf" secondAttribute="centerX" id="IL5-Sv-2UN"/>
+                            <constraint firstItem="i3s-hd-YAY" firstAttribute="centerY" secondItem="7EO-0w-DNf" secondAttribute="centerY" id="hye-47-bdI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Controls" id="VOA-Ho-lWP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bo9-dT-Kxw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156.52173913043478" y="93.75"/>
+        </scene>
+        <!--Image-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DownloadImage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ImageViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,18 +106,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nhP-tT-KPd">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Download an Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGV-HK-wuV">
-                                <rect key="frame" x="37.5" y="430" width="339.5" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aX6-pW-d1N">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <connections>
-                                    <action selector="getImagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PXG-aH-5QW"/>
-                                </connections>
-                            </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="7oT-am-kyb">
                                 <rect key="frame" x="197" y="438" width="20" height="20"/>
                             </activityIndicatorView>
@@ -39,32 +114,52 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nhP-tT-KPd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6gs-8n-vL7"/>
-                            <constraint firstItem="aX6-pW-d1N" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PIE-Im-zgh"/>
                             <constraint firstItem="nhP-tT-KPd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PQL-o1-lNA"/>
                             <constraint firstItem="7oT-am-kyb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Syw-12-BRe"/>
-                            <constraint firstItem="aX6-pW-d1N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aLG-bK-90W"/>
-                            <constraint firstItem="nGV-HK-wuV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fUi-Ka-jJ6"/>
                             <constraint firstItem="nhP-tT-KPd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fo5-Fq-SHV"/>
                             <constraint firstItem="7oT-am-kyb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oBt-ms-gJG"/>
                             <constraint firstAttribute="bottom" secondItem="nhP-tT-KPd" secondAttribute="bottom" id="pxw-OM-Vaa"/>
-                            <constraint firstItem="aX6-pW-d1N" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uJX-T3-ldn"/>
-                            <constraint firstItem="nGV-HK-wuV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vHQ-EC-coU"/>
-                            <constraint firstAttribute="bottom" secondItem="aX6-pW-d1N" secondAttribute="bottom" id="z7a-96-E6l"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Image" id="EPn-48-0O4"/>
                     <connections>
                         <outlet property="activityIndicator" destination="7oT-am-kyb" id="OWd-ZX-xeb"/>
-                        <outlet property="getImageButton" destination="aX6-pW-d1N" id="AwY-Y3-Ndf"/>
                         <outlet property="imageView" destination="nhP-tT-KPd" id="1mq-3E-oYL"/>
-                        <outlet property="label" destination="nGV-HK-wuV" id="zXG-05-FKP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140.57971014492756" y="93.75"/>
+            <point key="canvasLocation" x="904" y="94"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="k5F-hu-bJu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bTv-nF-tpa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sFi-GN-lpq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eDR-kM-J7f" kind="relationship" relationship="rootViewController" id="aSB-FH-kaS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iyK-nh-Xg6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-549" y="94"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="scrollViewTexturedBackgroundColor">
+            <color red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="scrollViewTexturedBackgroundColor">
+            <color red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="scrollViewTexturedBackgroundColor">
+            <color red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
