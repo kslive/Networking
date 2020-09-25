@@ -1,24 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DownloadImage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nhP-tT-KPd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Download an Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGV-HK-wuV">
+                                <rect key="frame" x="37.5" y="430" width="339.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aX6-pW-d1N">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <action selector="getImagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PXG-aH-5QW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nhP-tT-KPd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6gs-8n-vL7"/>
+                            <constraint firstItem="aX6-pW-d1N" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PIE-Im-zgh"/>
+                            <constraint firstItem="nhP-tT-KPd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PQL-o1-lNA"/>
+                            <constraint firstItem="aX6-pW-d1N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aLG-bK-90W"/>
+                            <constraint firstItem="nGV-HK-wuV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fUi-Ka-jJ6"/>
+                            <constraint firstItem="nhP-tT-KPd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fo5-Fq-SHV"/>
+                            <constraint firstAttribute="bottom" secondItem="nhP-tT-KPd" secondAttribute="bottom" id="pxw-OM-Vaa"/>
+                            <constraint firstItem="aX6-pW-d1N" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uJX-T3-ldn"/>
+                            <constraint firstItem="nGV-HK-wuV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vHQ-EC-coU"/>
+                            <constraint firstAttribute="bottom" secondItem="aX6-pW-d1N" secondAttribute="bottom" id="z7a-96-E6l"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="getImageButton" destination="aX6-pW-d1N" id="AwY-Y3-Ndf"/>
+                        <outlet property="imageView" destination="nhP-tT-KPd" id="1mq-3E-oYL"/>
+                        <outlet property="label" destination="nGV-HK-wuV" id="zXG-05-FKP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
