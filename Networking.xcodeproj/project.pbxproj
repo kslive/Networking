@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6B42C0D3251DDB150020F9BE /* DownloadImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B42C0D3251DDB150020F9BE /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B42C0D6251DDB150020F9BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B42C0D8251DDB150020F9BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6B42C0DA251DDB150020F9BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		6B42C0CA251DDB150020F9BE = {
 			isa = PBXGroup;
 			children = (
-				6B42C0D5251DDB150020F9BE /* DownloadImage */,
+				6B42C0D5251DDB150020F9BE /* Networking */,
 				6B42C0D4251DDB150020F9BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		6B42C0D4251DDB150020F9BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6B42C0D3251DDB150020F9BE /* DownloadImage.app */,
+				6B42C0D3251DDB150020F9BE /* Networking.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6B42C0D5251DDB150020F9BE /* DownloadImage */ = {
+		6B42C0D5251DDB150020F9BE /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				6B42C0D6251DDB150020F9BE /* AppDelegate.swift */,
@@ -64,15 +64,15 @@
 				6B42C0E1251DDB150020F9BE /* LaunchScreen.storyboard */,
 				6B42C0E4251DDB150020F9BE /* Info.plist */,
 			);
-			path = DownloadImage;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6B42C0D2251DDB150020F9BE /* DownloadImage */ = {
+		6B42C0D2251DDB150020F9BE /* Networking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6B42C0E7251DDB150020F9BE /* Build configuration list for PBXNativeTarget "DownloadImage" */;
+			buildConfigurationList = 6B42C0E7251DDB150020F9BE /* Build configuration list for PBXNativeTarget "Networking" */;
 			buildPhases = (
 				6B42C0CF251DDB150020F9BE /* Sources */,
 				6B42C0D0251DDB150020F9BE /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = DownloadImage;
+			name = Networking;
 			productName = DownloadImage;
-			productReference = 6B42C0D3251DDB150020F9BE /* DownloadImage.app */;
+			productReference = 6B42C0D3251DDB150020F9BE /* Networking.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +101,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6B42C0CE251DDB150020F9BE /* Build configuration list for PBXProject "DownloadImage" */;
+			buildConfigurationList = 6B42C0CE251DDB150020F9BE /* Build configuration list for PBXProject "Networking" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6B42C0D2251DDB150020F9BE /* DownloadImage */,
+				6B42C0D2251DDB150020F9BE /* Networking */,
 			);
 		};
 /* End PBXProject section */
@@ -288,7 +288,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2PAJC487U;
-				INFOPLIST_FILE = DownloadImage/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Networking/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +307,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2PAJC487U;
-				INFOPLIST_FILE = DownloadImage/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Networking/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,7 +322,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6B42C0CE251DDB150020F9BE /* Build configuration list for PBXProject "DownloadImage" */ = {
+		6B42C0CE251DDB150020F9BE /* Build configuration list for PBXProject "Networking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6B42C0E5251DDB150020F9BE /* Debug */,
@@ -331,7 +331,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6B42C0E7251DDB150020F9BE /* Build configuration list for PBXNativeTarget "DownloadImage" */ = {
+		6B42C0E7251DDB150020F9BE /* Build configuration list for PBXNativeTarget "Networking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6B42C0E8251DDB150020F9BE /* Debug */,
