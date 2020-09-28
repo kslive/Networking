@@ -9,6 +9,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 private let url = "https://jsonplaceholder.typicode.com/posts"
+private let uploadImage = "https://api.imgur.com/3/image"
 
 class MainViewController: UICollectionViewController {
     
@@ -44,7 +45,7 @@ class MainViewController: UICollectionViewController {
         case "Our Courses":
             performSegue(withIdentifier: "OurCourses", sender: self)
         case "Upload Image":
-            print("Upload Image")
+            networkManager.uploadImage(url: uploadImage)
         default:
             break
         }
