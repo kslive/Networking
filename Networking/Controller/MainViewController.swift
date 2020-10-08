@@ -14,7 +14,7 @@ private let uploadImage = "https://api.imgur.com/3/image"
 class MainViewController: UICollectionViewController {
     
     private let networkManager = NetworkManager.shared
-    private let actions = ["Download Image", "GET", "POST", "Our Courses", "Upload Image"]
+    private let actions = ["Download Image", "GET", "POST", "Our Courses", "Upload Image", "Download File"]
 
     // MARK: UICollectionViewDataSource
 
@@ -46,6 +46,8 @@ class MainViewController: UICollectionViewController {
             performSegue(withIdentifier: "OurCourses", sender: self)
         case "Upload Image":
             networkManager.uploadImage(url: uploadImage)
+        case "Download File":
+            print("d")
         default:
             break
         }

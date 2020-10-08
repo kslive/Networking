@@ -21,6 +21,7 @@
 		6B42C0DE251DDB150020F9BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B42C0DC251DDB150020F9BE /* Main.storyboard */; };
 		6B42C0E0251DDB150020F9BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B42C0DF251DDB150020F9BE /* Assets.xcassets */; };
 		6B42C0E3251DDB150020F9BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B42C0E1251DDB150020F9BE /* LaunchScreen.storyboard */; };
+		6BE600A3252EF26200C01CCD /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE600A2252EF26200C01CCD /* DataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		6B42C0DF251DDB150020F9BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B42C0E2251DDB150020F9BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B42C0E4251DDB150020F9BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BE600A2252EF26200C01CCD /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				6B3DBBFA2522074200C3E53F /* NetworkManager.swift */,
+				6BE600A2252EF26200C01CCD /* DataProvider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				6B3DBBE72521EA3600C3E53F /* TableViewCell.swift in Sources */,
 				6B3DBBE02521D9DE00C3E53F /* Course.swift in Sources */,
 				6B3DBBFB2522074200C3E53F /* NetworkManager.swift in Sources */,
+				6BE600A3252EF26200C01CCD /* DataProvider.swift in Sources */,
 				6B3DBBD92521C46D00C3E53F /* CoursesTableViewController.swift in Sources */,
 				6B42C0D7251DDB150020F9BE /* AppDelegate.swift in Sources */,
 				6B3DBBDC2521D92500C3E53F /* DescriptionViewController.swift in Sources */,
